@@ -1,0 +1,1 @@
+web: gunicorn InstaClone.wsgi --log-file -
