@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'cloudinary',
     'bootstrap4',
     'crispy_forms',
+    'instagram.apps.InstagramConfig',
+    'emoji_picker',
+    'social_django',
 ]
 
 MIDDLEWARE = [
