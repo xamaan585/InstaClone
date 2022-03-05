@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'InstaClone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': ('instaclone'),
+        'NAME': ('instagram'),
         'USER': ('suleiman'),
         'PASSWORD': ('db_password'),
     }
@@ -155,13 +155,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'home'
+LOGOUT_URL = 'login'
 
-cloudinary.config(
-    cloud_name = 'dfepx4zib',
-    api_key = '874626613369166',
-    api_secret = 'piT1NX4i7CXZ0Zaf0rJqyW4vUGI',
-)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dfepx4zib',
+    'API_KEY': '874626613369166',
+    'API_SECRET': 'piT1NX4i7CXZ0Zaf0rJqyW4vUGI',
+}
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
